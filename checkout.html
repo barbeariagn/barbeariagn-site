@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - BarbeariaGn</title>
+  <style>
+    body {
+      background:#0f172a;
+      color:white;
+      font-family:Arial;
+      padding:20px;
+    }
+    h1 { 
+      color:#facc15; 
+      margin-bottom:20px;
+    }
+    .box {
+      background:#1e293b;
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:20px;
+      font-size:18px;
+    }
+    button {
+      background:#facc15;
+      padding:15px;
+      border:none;
+      border-radius:8px;
+      width:100%;
+      font-size:18px;
+      margin-top:10px;
+    }
+    a {
+      color:#facc15;
+      text-decoration:none;
+      font-size:18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Confirmar Serviço</h1>
+
+  <div class="box">
+    <p><strong>Serviço selecionado:</strong></p>
+    <p id="servico">Carregando...</p>
+  </div>
+
+  <button onclick="confirmar()">Continuar para Pagamento</button>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const servico = urlParams.get("servico");
+
+    document.getElementById("servico").innerText = servico ?? "Nenhum serviço selecionado";
+
+    function confirmar() {
+      alert('Pagamento será configurado em breve.');
+    }
+  </script>
+
+  <p><a href="services.html">← Voltar</a></p>
+
+</body>
+</html>
