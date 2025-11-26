@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status do Atendimento - BarbeariaGn</title>
+  <style>
+    body {
+      background:#0f172a;
+      color:white;
+      font-family:Arial;
+      padding:20px;
+    }
+    h1 { 
+      color:#facc15; 
+      margin-bottom:20px;
+    }
+    .box {
+      background:#1e293b;
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:20px;
+      font-size:18px;
+    }
+    button {
+      background:#facc15;
+      padding:15px;
+      border:none;
+      border-radius:8px;
+      width:100%;
+      font-size:18px;
+    }
+    a {
+      color:#facc15;
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Status do Atendimento</h1>
+
+  <div class="box">
+    <p><strong>Cliente está sendo atendido?</strong></p>
+    <p id="status">Carregando...</p>
+  </div>
+
+  <button onclick="atualizar()">Atualizar Status</button>
+
+  <p><a href="index.html">← Voltar</a></p>
+
+  <script>
+    function atualizar() {
+      const estados = [
+        "Em atendimento",
+        "Aguardando",
+        "Finalizando",
+        "Pronto",
+        "Indisponível"
+      ];
+      const random = Math.floor(Math.random() * estados.length);
+      document.getElementById('status').innerText = estados[random];
+    }
+
+    atualizar();
+  </script>
+
+</body>
+</html>
