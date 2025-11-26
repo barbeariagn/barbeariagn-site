@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status do Atendimento - BarbeariaGn</title>
+    <style>
+        body {
+            background:#0f172a;
+            color:white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align:center;
+            color:#00d4ff;
+        }
+        .box {
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            margin-top:20px;
+            text-align:center;
+        }
+        button {
+            width:100%;
+            padding:14px;
+            margin-top:20px;
+            background:#00d4ff;
+            border:none;
+            border-radius:8px;
+            font-weight:bold;
+            font-size:18px;
+            color:black;
+        }
+        a {
+            display:block;
+            margin-top:20px;
+            text-align:center;
+            color:#00d4ff;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Status do seu Atendimento</h1>
+
+<div class="box" id="status">Verificando...</div>
+
+<button onclick="atualizarStatus()">Atualizar</button>
+<a href="index.html">Voltar</a>
+
+<script>
+function atualizarStatus() {
+    const status = ["Aguardando", "Em Atendimento", "Concluído"];
+    document.getElementById("status").innerText =
+        status[Math.floor(Math.random() * status.length)];
+}
+atualizarStatus();
+</script>
+
+</body>
+</html>
