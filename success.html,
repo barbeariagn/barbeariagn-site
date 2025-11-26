@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso - BarbeariaGn</title>
+    <style>
+        body {
+            background:#0f172a;
+            color:white;
+            font-family: Arial, sans-serif;
+            text-align:center;
+            padding: 40px 20px;
+        }
+        h1 {
+            color:#00d4ff;
+        }
+        a {
+            display:block;
+            background:#00d4ff;
+            margin-top:30px;
+            padding:14px;
+            border-radius:8px;
+            font-weight:bold;
+            color:black;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pagamento Concluído! ✔</h1>
+<p>Obrigado pela preferência!</p>
+
+<a href="index.html">Voltar ao Início</a>
+
+</body>
+</html>
